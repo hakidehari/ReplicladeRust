@@ -7,4 +7,4 @@ authors = ["Haki Dehari"]
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bio = "0.28.2"
+bio = "0.39.1"
