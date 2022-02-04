@@ -7,11 +7,18 @@ pub mod simulator {
     
     pub fn simulate() {
         let filename = prompt_filename();
-        let mut reader = Reader::from_file(&filename);
+        let file_reader = Reader::from_file(&filename).unwrap();
+        //let mut file_contents = BufReader::new(file_reader);
 
-        for result in reader { 
-            println!("{}", result.read_to_string());
+        
+        for record in file_reader.records() {
+            let result_data = &record.unwrap();
+            println!("{:?}", result_data.seq());
         }
+
+
+        
+
     }
 }
 
